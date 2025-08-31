@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RapidCare - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="nav-brand">RapidCare</h2>
+    <ul class="nav-menu">
+      <li><a href="login.html" class="btn btn-primary">Login</a></li>
+      <li><a href="signup.html" class="btn btn-secondary">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="auth-container">
+    <div class="auth-card">
+      <h1>Welcome to RapidCare</h1>
+      <p style="text-align:center; margin-bottom:1.5rem;">
+        Get real-time availability of <strong>Doctors, Hospitals & Equipments</strong>.
+      </p>
+      <div style="display:flex; gap:1rem; justify-content:center;">
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <a href="signup.html" class="btn btn-secondary">Sign Up</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
