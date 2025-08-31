@@ -9,7 +9,7 @@
 window.CONFIG = {
     // 🔴 REPLACE THESE VALUES WITH YOUR SUPABASE CREDENTIALS 🔴
     SUPABASE_URL: 'https://napxigoaplxnlloxavdn.supabase.co',  // <- Replace this
-    SUPABASE_ANON_KEY: 'your-anon-key-hereyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hcHhpZ29hcGx4bmxsb3hhdmRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY2Njc2OTUsImV4cCI6MjA3MjI0MzY5NX0.BkxHVkaPbVLKCXddGjnMsc8rRuUEXqqzvw8OX51ilpge',          // <- Replace this
+    SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hcHhpZ29hcGx4bmxsb3hhdmRuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY2Njc2OTUsImV4cCI6MjA3MjI0MzY5NX0.BkxHVkaPbVLKCXddGjnMsc8rRuUEXqqzvw8OX51ilpg',          // <- Replace this
     
     // Application settings
     APP_NAME: 'RapidCare',
