@@ -1,0 +1,29 @@
+{
+  "name": "rapidcare",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:sandbox": "wrangler pages dev dist --ip 0.0.0.0 --port 3000",
+    "build": "vite build",
+    "preview": "wrangler pages dev dist",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name rapidcare",
+    "clean-port": "fuser -k 3000/tcp 2>/dev/null || true",
+    "test": "curl http://localhost:3000",
+    "start:vscode": "wrangler pages dev dist --port 3000",
+    "build:start": "npm run build && npm run start:vscode",
+    "pm2:start": "pm2 start ecosystem.config.cjs",
+    "pm2:stop": "pm2 stop rapidcare",
+    "pm2:restart": "pm2 restart rapidcare",
+    "pm2:logs": "pm2 logs rapidcare --nostream",
+    "setup": "npm install && npm run build"
+  },
+  "dependencies": {
+    "hono": "^4.9.5"
+  },
+  "devDependencies": {
+    "@hono/vite-build": "^1.2.0",
+    "@hono/vite-dev-server": "^0.18.2",
+    "vite": "^6.3.5",
+    "wrangler": "^4.4.0"
+  }
+}

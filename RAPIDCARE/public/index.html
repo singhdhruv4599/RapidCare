@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RapidCare - Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2563eb, #10b981, #0ea5e9);
+      background-size: 400% 400%;
+      animation: gradientMove 12s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(10px);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+    }
+    .nav-brand {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-menu a {
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .btn-primary {
+      background: linear-gradient(90deg, #3b82f6, #2563eb);
+      color: white;
+      box-shadow: 0 4px 10px rgba(37,99,235,0.4);
+    }
+    .btn-primary:hover { transform: translateY(-2px); opacity: 0.95; }
+    .btn-secondary {
+      background: linear-gradient(90deg, #10b981, #059669);
+      color: white;
+      box-shadow: 0 4px 10px rgba(16,185,129,0.4);
+    }
+    .btn-secondary:hover { transform: translateY(-2px); opacity: 0.95; }
+
+    /* Hero Section */
+    .auth-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .auth-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 3rem 2rem;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+      animation: fadeUp 1s ease forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .auth-card h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    .auth-card p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .auth-card strong {
+      color: #fbbf24;
+    }
+    .auth-card .btn-primary,
+    .auth-card .btn-secondary {
+      font-size: 1rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h2 class="nav-brand">⚡ RapidCare</h2>
+    <ul class="nav-menu">
+      <li><a href="login.html" class="btn-primary">Login</a></li>
+      <li><a href="signup.html" class="btn-secondary">Sign Up</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="auth-container">
+    <div class="auth-card">
+      <h1>Welcome to RapidCare 🚑</h1>
+      <p>
+        Get real-time availability of <strong>Doctors</strong>, <strong>Hospitals</strong> & <strong>Equipments</strong> across India.  
+      </p>
+      <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="login.html" class="btn-primary">Login</a>
+        <a href="signup.html" class="btn-secondary">Sign Up</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
